@@ -16,5 +16,18 @@ target 'DataMovieApp' do
   
   # UI
 
-
 end
+
+target 'UIComponents' do
+  
+  project 'UIComponents/UIComponents.xcodeproj'
+
+  # Helper
+  pod 'SwiftGen', '~> 6.0'
+
+  
+  # UI
+  pod 'TinyConstraints', '~> 4.0'
+  
+end
+
