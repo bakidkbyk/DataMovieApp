@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,18 @@
 		2D1E21162AE112E800EEF185 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E21152AE112E800EEF185 /* AppRouter.swift */; };
 		2D1E21182AE112F200EEF185 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E21172AE112F200EEF185 /* Animator.swift */; };
 		2D1E211A2AE112FE00EEF185 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E21192AE112FE00EEF185 /* Router.swift */; };
+		2D3F53602AE33138005B441E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F535F2AE33138005B441E /* BaseViewController.swift */; };
+		2D3F53622AE3314B005B441E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53612AE3314B005B441E /* BaseViewModel.swift */; };
 		2D43BB102AE0A2A300A6702C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D43BB0F2AE0A2A300A6702C /* .swiftlint.yml */; };
+		2DD358A92AE11A1A001D1EA5 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD358A82AE11A1A001D1EA5 /* DataProvider.framework */; };
+		2DD358AA2AE11A1A001D1EA5 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD358A82AE11A1A001D1EA5 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DD358AC2AE11A1E001D1EA5 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD358AB2AE11A1E001D1EA5 /* Utilities.framework */; };
+		2DD358AD2AE11A1E001D1EA5 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD358AB2AE11A1E001D1EA5 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DD358B02AE14613001D1EA5 /* APIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD358AF2AE14613001D1EA5 /* APIDataProvider.swift */; };
+		2DD358B22AE14620001D1EA5 /* APIRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD358B12AE14620001D1EA5 /* APIRequestInterceptor.swift */; };
+		2DD358B42AE146FA001D1EA5 /* APIRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD358B32AE146FA001D1EA5 /* APIRequestAdapter.swift */; };
+		2DD358B62AE14706001D1EA5 /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD358B52AE14706001D1EA5 /* APILogger.swift */; };
+		2DD358B82AE1471A001D1EA5 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD358B72AE1471A001D1EA5 /* DataProvider.swift */; };
 		2DEAB99F2ADFE28D007FD609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAB99E2ADFE28D007FD609 /* AppDelegate.swift */; };
 		2DEAB9A32ADFE28D007FD609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEAB9A22ADFE28D007FD609 /* ViewController.swift */; };
 		2DEAB9A82ADFE28F007FD609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEAB9A72ADFE28F007FD609 /* Assets.xcassets */; };
@@ -33,6 +44,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2DEAB9CB2ADFFF54007FD609 /* UIComponents.framework in Embed Frameworks */,
+				2DD358AD2AE11A1E001D1EA5 /* Utilities.framework in Embed Frameworks */,
+				2DD358AA2AE11A1A001D1EA5 /* DataProvider.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,7 +61,16 @@
 		2D1E21152AE112E800EEF185 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		2D1E21172AE112F200EEF185 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		2D1E21192AE112FE00EEF185 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2D3F535F2AE33138005B441E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2D3F53612AE3314B005B441E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		2D43BB0F2AE0A2A300A6702C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		2DD358A82AE11A1A001D1EA5 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD358AB2AE11A1E001D1EA5 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD358AF2AE14613001D1EA5 /* APIDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataProvider.swift; sourceTree = "<group>"; };
+		2DD358B12AE14620001D1EA5 /* APIRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestInterceptor.swift; sourceTree = "<group>"; };
+		2DD358B32AE146FA001D1EA5 /* APIRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestAdapter.swift; sourceTree = "<group>"; };
+		2DD358B52AE14706001D1EA5 /* APILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILogger.swift; sourceTree = "<group>"; };
+		2DD358B72AE1471A001D1EA5 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		2DEAB99B2ADFE28D007FD609 /* DataMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEAB99E2ADFE28D007FD609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DEAB9A22ADFE28D007FD609 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD358A92AE11A1A001D1EA5 /* DataProvider.framework in Frameworks */,
 				2DEAB9CA2ADFFF54007FD609 /* UIComponents.framework in Frameworks */,
 				A777DB25385801B509746615 /* Pods_DataMovieApp.framework in Frameworks */,
+				2DD358AC2AE11A1E001D1EA5 /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +146,43 @@
 			path = Route;
 			sourceTree = "<group>";
 		};
+		2D3F535D2AE330EE005B441E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F53722AE33494005B441E /* Home */,
+				2D3F535E2AE330F9005B441E /* Base */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2D3F535E2AE330F9005B441E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F535F2AE33138005B441E /* BaseViewController.swift */,
+				2D3F53612AE3314B005B441E /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2D3F53722AE33494005B441E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DD358AE2AE145F8001D1EA5 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				2DD358AF2AE14613001D1EA5 /* APIDataProvider.swift */,
+				2DD358B12AE14620001D1EA5 /* APIRequestInterceptor.swift */,
+				2DD358B32AE146FA001D1EA5 /* APIRequestAdapter.swift */,
+				2DD358B52AE14706001D1EA5 /* APILogger.swift */,
+				2DD358B72AE1471A001D1EA5 /* DataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
 		2DEAB9922ADFE28D007FD609 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +205,8 @@
 		2DEAB99D2ADFE28D007FD609 /* DataMovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D3F535D2AE330EE005B441E /* Scenes */,
+				2DD358AE2AE145F8001D1EA5 /* DataProvider */,
 				2D1E21042AE1120300EEF185 /* Routing */,
 				2DEAB9B42ADFFE91007FD609 /* AppDelegate */,
 				2DEAB9A22ADFE28D007FD609 /* ViewController.swift */,
@@ -166,6 +229,8 @@
 		36B455A3B5ECC5931203A2BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DD358AB2AE11A1E001D1EA5 /* Utilities.framework */,
+				2DD358A82AE11A1A001D1EA5 /* DataProvider.framework */,
 				2DEAB9C92ADFFF54007FD609 /* UIComponents.framework */,
 				AB0B1CF43783EF76AA62938C /* Pods_DataMovieApp.framework */,
 			);
@@ -194,6 +259,7 @@
 				2DEAB9982ADFE28D007FD609 /* Frameworks */,
 				2DEAB9992ADFE28D007FD609 /* Resources */,
 				2DEAB9CC2ADFFF54007FD609 /* Embed Frameworks */,
+				DA4A9B0372DAA14EA883F742 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +287,7 @@
 				};
 			};
 			buildConfigurationList = 2DEAB9962ADFE28D007FD609 /* Build configuration list for PBXProject "DataMovieApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -292,6 +358,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DA4A9B0372DAA14EA883F742 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DataMovieApp/Pods-DataMovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DataMovieApp/Pods-DataMovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DataMovieApp/Pods-DataMovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -301,12 +384,19 @@
 			files = (
 				2D1E21142AE112C200EEF185 /* Transition.swift in Sources */,
 				2D1E210E2AE1129200EEF185 /* ModalTransition.swift in Sources */,
+				2D3F53622AE3314B005B441E /* BaseViewModel.swift in Sources */,
 				2D1E211A2AE112FE00EEF185 /* Router.swift in Sources */,
+				2DD358B02AE14613001D1EA5 /* APIDataProvider.swift in Sources */,
 				2DEAB9A32ADFE28D007FD609 /* ViewController.swift in Sources */,
 				2D1E21102AE112A800EEF185 /* PlaceOnWindowTransition.swift in Sources */,
 				2D1E21162AE112E800EEF185 /* AppRouter.swift in Sources */,
 				2DEAB99F2ADFE28D007FD609 /* AppDelegate.swift in Sources */,
+				2DD358B22AE14620001D1EA5 /* APIRequestInterceptor.swift in Sources */,
+				2DD358B42AE146FA001D1EA5 /* APIRequestAdapter.swift in Sources */,
+				2DD358B62AE14706001D1EA5 /* APILogger.swift in Sources */,
 				2D1E21182AE112F200EEF185 /* Animator.swift in Sources */,
+				2DD358B82AE1471A001D1EA5 /* DataProvider.swift in Sources */,
+				2D3F53602AE33138005B441E /* BaseViewController.swift in Sources */,
 				2D1E21122AE112B900EEF185 /* PushTransition.swift in Sources */,
 				2D1E210A2AE1126B00EEF185 /* DismissableRoute.swift in Sources */,
 			);
@@ -376,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -430,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -456,7 +546,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +578,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
