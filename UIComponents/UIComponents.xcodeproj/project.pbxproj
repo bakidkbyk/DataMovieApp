@@ -3,11 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		081FDFB159E95F3D012D4308 /* Pods_UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40061580C79A5B0700C00120 /* Pods_UIComponents.framework */; };
+		2D3F53652AE331ED005B441E /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53642AE331ED005B441E /* ActivityIndicatorView.swift */; };
+		2D3F53682AE33217005B441E /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53672AE33217005B441E /* ToastPresenter.swift */; };
+		2D3F536A2AE3322D005B441E /* ToastWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53692AE3322D005B441E /* ToastWarningView.swift */; };
+		2D3F536D2AE33265005B441E /* LoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F536C2AE33265005B441E /* LoadingProtocol.swift */; };
+		2D3F536F2AE33273005B441E /* ActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F536E2AE33273005B441E /* ActivityIndicatorProtocol.swift */; };
+		2D3F53712AE33283005B441E /* BlockingActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53702AE33283005B441E /* BlockingActivityIndicator.swift */; };
 		2D43BAEF2AE09A7700A6702C /* UIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D43BAEE2AE09A7700A6702C /* UIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D43BAF72AE09E3200A6702C /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D43BAF62AE09E3200A6702C /* swiftgen.yml */; };
 		2D43BAFB2AE09E9000A6702C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D43BAFA2AE09E9000A6702C /* Localizable.strings */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D3F53642AE331ED005B441E /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		2D3F53672AE33217005B441E /* ToastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
+		2D3F53692AE3322D005B441E /* ToastWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastWarningView.swift; sourceTree = "<group>"; };
+		2D3F536C2AE33265005B441E /* LoadingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProtocol.swift; sourceTree = "<group>"; };
+		2D3F536E2AE33273005B441E /* ActivityIndicatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorProtocol.swift; sourceTree = "<group>"; };
+		2D3F53702AE33283005B441E /* BlockingActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingActivityIndicator.swift; sourceTree = "<group>"; };
 		2D43BAEB2AE09A7700A6702C /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D43BAEE2AE09A7700A6702C /* UIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponents.h; sourceTree = "<group>"; };
 		2D43BAF62AE09E3200A6702C /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
@@ -53,6 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3F53632AE33182005B441E /* UIActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F53642AE331ED005B441E /* ActivityIndicatorView.swift */,
+			);
+			path = UIActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		2D3F53662AE331F7005B441E /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F53672AE33217005B441E /* ToastPresenter.swift */,
+				2D3F53692AE3322D005B441E /* ToastWarningView.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		2D3F536B2AE33257005B441E /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F536C2AE33265005B441E /* LoadingProtocol.swift */,
+				2D3F536E2AE33273005B441E /* ActivityIndicatorProtocol.swift */,
+				2D3F53702AE33283005B441E /* BlockingActivityIndicator.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		2D43BAE12AE09A7700A6702C = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +114,9 @@
 		2D43BAED2AE09A7700A6702C /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2D3F536B2AE33257005B441E /* Loading */,
+				2D3F53662AE331F7005B441E /* Toast */,
+				2D3F53632AE33182005B441E /* UIActivityIndicatorView */,
 				2D43BAF82AE09E6400A6702C /* Resources */,
 				2D43BAEE2AE09A7700A6702C /* UIComponents.h */,
 			);
@@ -182,7 +224,7 @@
 				};
 			};
 			buildConfigurationList = 2D43BAE52AE09A7700A6702C /* Build configuration list for PBXProject "UIComponents" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -264,10 +306,16 @@
 			files = (
 				2D43BB0E2AE0A02400A6702C /* Localize.swift in Sources */,
 				2D43BB062AE09F5100A6702C /* Assets.swift in Sources */,
+				2D3F536D2AE33265005B441E /* LoadingProtocol.swift in Sources */,
+				2D3F53682AE33217005B441E /* ToastPresenter.swift in Sources */,
 				2D43BAFD2AE09EB500A6702C /* StringConstants.swift in Sources */,
 				2D43BB0C2AE09FB800A6702C /* UIColor+Colors.swift in Sources */,
 				2D43BB0A2AE09F9200A6702C /* UIImage+Icons.swift in Sources */,
 				2D43BB082AE09F8300A6702C /* UIImage+Images.swift in Sources */,
+				2D3F536A2AE3322D005B441E /* ToastWarningView.swift in Sources */,
+				2D3F53712AE33283005B441E /* BlockingActivityIndicator.swift in Sources */,
+				2D3F536F2AE33273005B441E /* ActivityIndicatorProtocol.swift in Sources */,
+				2D3F53652AE331ED005B441E /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +457,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,7 +489,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
