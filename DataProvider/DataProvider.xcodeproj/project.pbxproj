@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A507034352938DE09680B16 /* Pods_DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD02538B59640F378178F52 /* Pods_DataProvider.framework */; };
+		2D3203272AE3C444009C6CAB /* DataMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3203262AE3C444009C6CAB /* DataMovieResponse.swift */; };
+		2D3203292AE3C7E2009C6CAB /* DataMovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3203282AE3C7E2009C6CAB /* DataMovieInfo.swift */; };
+		2D32032C2AE3F0D9009C6CAB /* NowPlayingDataMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32032B2AE3F0D9009C6CAB /* NowPlayingDataMovieRequest.swift */; };
 		2D3F534C2AE32E14005B441E /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F534B2AE32E14005B441E /* Typealias.swift */; };
 		2D3F534E2AE32E21005B441E /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F534D2AE32E21005B441E /* RequestProtocol.swift */; };
 		2D3F53502AE32E2E005B441E /* DecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F534F2AE32E2E005B441E /* DecodableResponseRequest.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D3203262AE3C444009C6CAB /* DataMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMovieResponse.swift; sourceTree = "<group>"; };
+		2D3203282AE3C7E2009C6CAB /* DataMovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMovieInfo.swift; sourceTree = "<group>"; };
+		2D32032B2AE3F0D9009C6CAB /* NowPlayingDataMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingDataMovieRequest.swift; sourceTree = "<group>"; };
 		2D3F534B2AE32E14005B441E /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		2D3F534D2AE32E21005B441E /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		2D3F534F2AE32E2E005B441E /* DecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponseRequest.swift; sourceTree = "<group>"; };
@@ -49,6 +55,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3203252AE3C3C9009C6CAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D3203262AE3C444009C6CAB /* DataMovieResponse.swift */,
+				2D3203282AE3C7E2009C6CAB /* DataMovieInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D32032A2AE3F099009C6CAB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2D32032B2AE3F0D9009C6CAB /* NowPlayingDataMovieRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		2D3F534A2AE32E04005B441E /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +108,9 @@
 		2DD358892AE1174B001D1EA5 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				2D32032A2AE3F099009C6CAB /* Request */,
 				2D3F534A2AE32E04005B441E /* Core */,
+				2D3203252AE3C3C9009C6CAB /* Model */,
 				2DD3588A2AE1174B001D1EA5 /* DataProvider.h */,
 			);
 			path = DataProvider;
@@ -218,9 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3F535A2AE32E7A005B441E /* DataMovieAppRequest.swift in Sources */,
+				2D32032C2AE3F0D9009C6CAB /* NowPlayingDataMovieRequest.swift in Sources */,
 				2D3F53502AE32E2E005B441E /* DecodableResponseRequest.swift in Sources */,
+				2D3203292AE3C7E2009C6CAB /* DataMovieInfo.swift in Sources */,
 				2D3F534C2AE32E14005B441E /* Typealias.swift in Sources */,
 				2D3F53562AE32E57005B441E /* RequestEncoding.swift in Sources */,
+				2D3203272AE3C444009C6CAB /* DataMovieResponse.swift in Sources */,
 				2D3F534E2AE32E21005B441E /* RequestProtocol.swift in Sources */,
 				2D3F53542AE32E49005B441E /* RequestMethod.swift in Sources */,
 				2D3F53582AE32E68005B441E /* DataProviderResult.swift in Sources */,
