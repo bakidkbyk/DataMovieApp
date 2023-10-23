@@ -10,4 +10,11 @@ public struct DataMovieResponse: Codable {
     public let results: [DataMovieInfo]
     public let totalPages: Int
     public let totalResults: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case page
+        case results
+        case totalPage = "total_pages"
+        case totalResults = "total_results"
+    }
 }

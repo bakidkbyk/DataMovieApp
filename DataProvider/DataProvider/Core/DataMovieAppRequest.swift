@@ -30,5 +30,4 @@ public extension DataMovieAppRequest {
     var url: String {
         return "https://api.themoviedb.org/3/movie/" + path
     }
-
 }
