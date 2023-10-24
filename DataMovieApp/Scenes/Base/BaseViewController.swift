@@ -14,13 +14,14 @@ class BaseViewController<V: BaseViewModeProtocol>: UIViewController, BaseViewCon
     init(viewModel: V) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribeActivityIndicator()
         subscribeLoading()
-        subscribeToast()
+        // subscribeToast()
     }
     
     // swiftlint:disable fatal_error unavailable_function
@@ -51,14 +52,14 @@ class BaseViewController<V: BaseViewModeProtocol>: UIViewController, BaseViewCon
         viewModel.showWarningToast = { text in
             ToastPresenter.showWarningToast(text: text)
         }
-        
+
         viewModel.showSuccessToast = { text in
             ToastPresenter.showSuccessToast(text: text)
         }
-        
-        
+
+
     }
-    
+
     func showWarningToast(message: String) {
         ToastPresenter.showWarningToast(text: message)
     }
