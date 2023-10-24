@@ -5,12 +5,12 @@
 //  Created by Baki Dikbıyık on 21.10.2023.
 //
 
-public struct DataMovieResponse: Codable {
+public struct DataMovieResponse: Decodable {
     public let page: Int
     public let results: [DataMovieInfo]
-    public let totalPages: Int
+    public let totalPage: Int
     public let totalResults: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case page
         case results

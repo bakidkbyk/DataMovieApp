@@ -11,4 +11,12 @@ public struct DataMovieInfo: Decodable {
     public let overView: String?
     public let date: String?
     public let backdropPath: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case overView
+        case date = "release_date"
+        case backdropPath = "backdrop_path"
+    }
 }

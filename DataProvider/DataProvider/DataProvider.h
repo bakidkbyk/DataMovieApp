@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Utilities/Utilities.h>
 
 //! Project version number for DataProvider.
 FOUNDATION_EXPORT double DataProviderVersionNumber;

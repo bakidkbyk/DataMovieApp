@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D3F535C2AE32F23005B441E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F535B2AE32F23005B441E /* Keychain.swift */; };
+		2D699E7D2AE50EFB00504B0A /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D699E7C2AE50EFB00504B0A /* Base.swift */; };
 		2DD3589F2AE1177F001D1EA5 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD3589E2AE1177F001D1EA5 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DD358A72AE1198F001D1EA5 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD358A62AE1198F001D1EA5 /* Closures.swift */; };
 		77CE6AF846A4A9EB9A892650 /* Pods_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5858737AA01580A435F8DA7 /* Pods_Utilities.framework */; };
@@ -16,6 +17,7 @@
 /* Begin PBXFileReference section */
 		205C6B5DB0ADFB9460898520 /* Pods-Utilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities.release.xcconfig"; path = "Target Support Files/Pods-Utilities/Pods-Utilities.release.xcconfig"; sourceTree = "<group>"; };
 		2D3F535B2AE32F23005B441E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		2D699E7C2AE50EFB00504B0A /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		2DD3589B2AE1177F001D1EA5 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD3589E2AE1177F001D1EA5 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		2DD358A62AE1198F001D1EA5 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				2DD358A62AE1198F001D1EA5 /* Closures.swift */,
 				2D3F535B2AE32F23005B441E /* Keychain.swift */,
+				2D699E7C2AE50EFB00504B0A /* Base.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D699E7D2AE50EFB00504B0A /* Base.swift in Sources */,
 				2DD358A72AE1198F001D1EA5 /* Closures.swift in Sources */,
 				2D3F535C2AE32F23005B441E /* Keychain.swift in Sources */,
 			);
