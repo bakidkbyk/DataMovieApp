@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class PageControl: UIView {
+public class PageControl: UIPageControl {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +20,9 @@ public class PageControl: UIView {
     }
     
     private func configureContents() {
-        
+        tintColor = .white
+        pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.3)
+        currentPageIndicatorTintColor = .white
     }
     
 }

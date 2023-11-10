@@ -7,6 +7,6 @@
 
 import UIKit
 
-class HomeMovieHeaderView: UICollectionReusableView {
-        
+class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
+// TODO: - HomeheaderView
 }

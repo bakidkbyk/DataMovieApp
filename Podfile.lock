@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.8.0)
   - KeychainSwift (19.0.0)
+  - Kingfisher (6.3.1)
   - MobilliumBuilders (1.6.1)
   - SwiftEntryKit (2.0.0)
   - SwiftGen (6.6.2)
@@ -10,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.3)
   - KeychainSwift (~> 19.0)
+  - Kingfisher (~> 6.3)
   - MobilliumBuilders (~> 1.4)
   - SwiftEntryKit (~> 2.0.0)
   - SwiftGen (~> 6.0)
@@ -20,6 +22,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - KeychainSwift
+    - Kingfisher
     - MobilliumBuilders
     - SwiftEntryKit
     - SwiftGen
@@ -29,12 +32,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MobilliumBuilders: fe858e0098491eb989539ebe8ddf4d5f7db6809e
   SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
   SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
   SwiftLint: 1cc5cd61ba9bacb2194e340aeb47a2a37fda00b3
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: e25a02e8f1d7446d77ede6b2069c0a6b3421989a
+PODFILE CHECKSUM: 1b36ac7c20b0e39d55ce93f845199b291afcefa3
 
 COCOAPODS: 1.12.1
