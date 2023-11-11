@@ -5,13 +5,12 @@
 //  Created by Baki Dikbıyık on 24.10.2023.
 //
 
-import Foundation
 
 public protocol HomeMovieHeaderCellDataSource: AnyObject {
-    var backdropPath: String? { get set }
-    var id: Int { get set }
-    var title: String? { get set }
-    var overview: String? { get set }
+    var backdropPath: String? { get }
+    var id: Int { get }
+    var title: String? { get }
+    var overview: String? { get }
 }
 
 public protocol HomeMovieHeaderCellEventSource: AnyObject {
