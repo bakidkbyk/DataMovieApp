@@ -6,10 +6,11 @@
 //
 
 import TinyConstraints
+import MobilliumBuilders
 
 public class ToastWarningView: UIView {
     
-    private let label = UILabel()
+    private let label = UILabelBuilder()
         .font(.systemFont(ofSize: 16))
         .textColor(.white)
         .textAlignment(.center)

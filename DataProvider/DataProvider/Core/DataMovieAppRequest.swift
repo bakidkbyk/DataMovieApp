@@ -28,6 +28,6 @@ public extension DataMovieAppRequest {
     }
     
     var url: String {
-        return "https://basicnoteapp.mobillium.com/api/" + path
+        return "https://api.themoviedb.org/3/" + path
     }
 }

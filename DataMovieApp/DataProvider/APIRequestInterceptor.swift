@@ -17,7 +17,7 @@ public class APIRequestInterceptor: RequestInterceptor {
         let accessToken = KeychainSwift().get(Keychain.token)
         
         if let accessToken = accessToken {
-            urlRequest.headers.add(name: "X-BasicNoteApp-Token", value: accessToken)
+            urlRequest.headers.add(name: "X-DataMovieApp-Token", value: accessToken)
         }
 
         completion(.success(urlRequest))

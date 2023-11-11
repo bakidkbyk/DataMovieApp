@@ -40,6 +40,7 @@ target 'UIComponents' do
   # Helper
   pod 'SwiftGen', '~> 6.0'
   pod 'SwiftEntryKit', '~> 2.0.0'
+  pod 'Kingfisher', '~> 6.3'
   
   # UI
   pod 'TinyConstraints', '~> 4.0'

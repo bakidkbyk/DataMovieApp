@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		081FDFB159E95F3D012D4308 /* Pods_UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40061580C79A5B0700C00120 /* Pods_UIComponents.framework */; };
+		2D131E972AFB99390099432A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D131E962AFB99390099432A /* Fonts.swift */; };
+		2D131E9C2AFB99730099432A /* UIFonts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D131E9B2AFB99730099432A /* UIFonts+Extensions.swift */; };
 		2D3F53652AE331ED005B441E /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53642AE331ED005B441E /* ActivityIndicatorView.swift */; };
 		2D3F53682AE33217005B441E /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53672AE33217005B441E /* ToastPresenter.swift */; };
 		2D3F536A2AE3322D005B441E /* ToastWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F53692AE3322D005B441E /* ToastWarningView.swift */; };
@@ -26,9 +28,20 @@
 		2D43BB0A2AE09F9200A6702C /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43BB092AE09F9200A6702C /* UIImage+Icons.swift */; };
 		2D43BB0C2AE09FB800A6702C /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43BB0B2AE09FB800A6702C /* UIColor+Colors.swift */; };
 		2D43BB0E2AE0A02400A6702C /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43BB0D2AE0A02400A6702C /* Localize.swift */; };
+		2D5CF7862AFE015B0094A74A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */; };
+		2D9C0ACE2AE7D6CB00941255 /* HomeMovieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C0ACD2AE7D6CB00941255 /* HomeMovieHeaderView.swift */; };
+		2D9C0AD12AE7DBD200941255 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C0AD02AE7DBD200941255 /* PageControl.swift */; };
+		2D9C0AD62AE7DCAD00941255 /* HomeMovieHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C0AD42AE7DCAD00941255 /* HomeMovieHeaderCell.swift */; };
+		2D9C0AD72AE7DCAD00941255 /* HomeMovieHeaderCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C0AD52AE7DCAD00941255 /* HomeMovieHeaderCellModel.swift */; };
+		2DF016352AEA0E4A00696EDA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF016342AEA0E4A00696EDA /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D131E962AFB99390099432A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		2D131E982AFB995B0099432A /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		2D131E992AFB995B0099432A /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2D131E9A2AFB995B0099432A /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		2D131E9B2AFB99730099432A /* UIFonts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFonts+Extensions.swift"; sourceTree = "<group>"; };
 		2D3F53642AE331ED005B441E /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		2D3F53672AE33217005B441E /* ToastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
 		2D3F53692AE3322D005B441E /* ToastWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastWarningView.swift; sourceTree = "<group>"; };
@@ -48,6 +61,12 @@
 		2D43BB092AE09F9200A6702C /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
 		2D43BB0B2AE09FB800A6702C /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		2D43BB0D2AE0A02400A6702C /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		2D9C0ACD2AE7D6CB00941255 /* HomeMovieHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMovieHeaderView.swift; sourceTree = "<group>"; };
+		2D9C0AD02AE7DBD200941255 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		2D9C0AD42AE7DCAD00941255 /* HomeMovieHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMovieHeaderCell.swift; sourceTree = "<group>"; };
+		2D9C0AD52AE7DCAD00941255 /* HomeMovieHeaderCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMovieHeaderCellModel.swift; sourceTree = "<group>"; };
+		2DF016342AEA0E4A00696EDA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		34F184F00FF041D206532C8A /* Pods-UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-UIComponents/Pods-UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
 		40061580C79A5B0700C00120 /* Pods_UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB7D90500CDB6E58D7F9DF7 /* Pods-UIComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponents.release.xcconfig"; path = "Target Support Files/Pods-UIComponents/Pods-UIComponents.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D131E952AFB992A0099432A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2D131E982AFB995B0099432A /* Nunito-Bold.ttf */,
+				2D131E992AFB995B0099432A /* Nunito-ExtraBold.ttf */,
+				2D131E9A2AFB995B0099432A /* Nunito-SemiBold.ttf */,
+				2D131E962AFB99390099432A /* Fonts.swift */,
+				2D131E9B2AFB99730099432A /* UIFonts+Extensions.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2D3F53632AE33182005B441E /* UIActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +145,11 @@
 		2D43BAED2AE09A7700A6702C /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2D5CF7842AFE013B0094A74A /* Extensions */,
+				2DF016332AEA0E3200696EDA /* Protocols */,
+				2D9C0AD22AE7DC7500941255 /* HomeCell */,
+				2D9C0ACF2AE7DBAF00941255 /* UIPageControl */,
+				2D9C0ACC2AE7D66000941255 /* UICollectionReusableView */,
 				2D3F536B2AE33257005B441E /* Loading */,
 				2D3F53662AE331F7005B441E /* Toast */,
 				2D3F53632AE33182005B441E /* UIActivityIndicatorView */,
@@ -126,6 +162,7 @@
 		2D43BAF82AE09E6400A6702C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D131E952AFB992A0099432A /* Fonts */,
 				2D43BAFE2AE09ED200A6702C /* Assets */,
 				2D43BAF92AE09E7C00A6702C /* Strings */,
 			);
@@ -154,6 +191,55 @@
 				2D43BB0B2AE09FB800A6702C /* UIColor+Colors.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		2D5CF7842AFE013B0094A74A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D9C0ACC2AE7D66000941255 /* UICollectionReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				2D9C0ACD2AE7D6CB00941255 /* HomeMovieHeaderView.swift */,
+			);
+			path = UICollectionReusableView;
+			sourceTree = "<group>";
+		};
+		2D9C0ACF2AE7DBAF00941255 /* UIPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				2D9C0AD02AE7DBD200941255 /* PageControl.swift */,
+			);
+			path = UIPageControl;
+			sourceTree = "<group>";
+		};
+		2D9C0AD22AE7DC7500941255 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D9C0AD32AE7DC8800941255 /* HomeMovieHeaderCell */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		2D9C0AD32AE7DC8800941255 /* HomeMovieHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D9C0AD42AE7DCAD00941255 /* HomeMovieHeaderCell.swift */,
+				2D9C0AD52AE7DCAD00941255 /* HomeMovieHeaderCellModel.swift */,
+			);
+			path = HomeMovieHeaderCell;
+			sourceTree = "<group>";
+		};
+		2DF016332AEA0E3200696EDA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2DF016342AEA0E4A00696EDA /* ReusableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		957562BD752742303CC8AE68 /* Pods */ = {
@@ -305,17 +391,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D43BB0E2AE0A02400A6702C /* Localize.swift in Sources */,
+				2DF016352AEA0E4A00696EDA /* ReusableView.swift in Sources */,
 				2D43BB062AE09F5100A6702C /* Assets.swift in Sources */,
 				2D3F536D2AE33265005B441E /* LoadingProtocol.swift in Sources */,
 				2D3F53682AE33217005B441E /* ToastPresenter.swift in Sources */,
+				2D9C0ACE2AE7D6CB00941255 /* HomeMovieHeaderView.swift in Sources */,
 				2D43BAFD2AE09EB500A6702C /* StringConstants.swift in Sources */,
 				2D43BB0C2AE09FB800A6702C /* UIColor+Colors.swift in Sources */,
 				2D43BB0A2AE09F9200A6702C /* UIImage+Icons.swift in Sources */,
+				2D5CF7862AFE015B0094A74A /* UIImageView+Extensions.swift in Sources */,
+				2D9C0AD12AE7DBD200941255 /* PageControl.swift in Sources */,
 				2D43BB082AE09F8300A6702C /* UIImage+Images.swift in Sources */,
 				2D3F536A2AE3322D005B441E /* ToastWarningView.swift in Sources */,
 				2D3F53712AE33283005B441E /* BlockingActivityIndicator.swift in Sources */,
+				2D9C0AD72AE7DCAD00941255 /* HomeMovieHeaderCellModel.swift in Sources */,
+				2D131E9C2AFB99730099432A /* UIFonts+Extensions.swift in Sources */,
 				2D3F536F2AE33273005B441E /* ActivityIndicatorProtocol.swift in Sources */,
 				2D3F53652AE331ED005B441E /* ActivityIndicatorView.swift in Sources */,
+				2D131E972AFB99390099432A /* Fonts.swift in Sources */,
+				2D9C0AD62AE7DCAD00941255 /* HomeMovieHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
