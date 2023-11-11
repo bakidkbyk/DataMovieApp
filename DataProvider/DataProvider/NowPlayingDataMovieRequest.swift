@@ -17,5 +17,4 @@ public struct NowPlayingDataMovieRequest: APIDecodableResponseRequest {
     public init() {
         self.parameters["api_key"] = "c769702d7265a55746233428c8f77e7a"
     }
-    
 }
