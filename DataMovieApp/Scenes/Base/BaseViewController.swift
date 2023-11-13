@@ -21,7 +21,7 @@ class BaseViewController<V: BaseViewModeProtocol>: UIViewController, BaseViewCon
         super.viewDidLoad()
         subscribeActivityIndicator()
         subscribeLoading()
-        // subscribeToast()
+        subscribeToast()
     }
     
     // swiftlint:disable fatal_error unavailable_function
@@ -56,8 +56,6 @@ class BaseViewController<V: BaseViewModeProtocol>: UIViewController, BaseViewCon
         viewModel.showSuccessToast = { text in
             ToastPresenter.showSuccessToast(text: text)
         }
-
-
     }
 
     func showWarningToast(message: String) {

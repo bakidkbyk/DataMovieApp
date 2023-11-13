@@ -5,7 +5,6 @@
 //  Created by Baki Dikbıyık on 24.10.2023.
 //
 
-
 public protocol HomeMovieHeaderCellDataSource: AnyObject {
     var backdropPath: String? { get }
     var id: Int { get }
@@ -13,9 +12,7 @@ public protocol HomeMovieHeaderCellDataSource: AnyObject {
     var overview: String? { get }
 }
 
-public protocol HomeMovieHeaderCellEventSource: AnyObject {
-    
-}
+public protocol HomeMovieHeaderCellEventSource: AnyObject {}
 
 public protocol HomeMovieHeaderCellProtocol: HomeMovieHeaderCellDataSource, HomeMovieHeaderCellEventSource {
     

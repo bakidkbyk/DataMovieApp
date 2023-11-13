@@ -50,7 +50,6 @@ extension HomeMovieHeaderCell {
         descriptionLabel.topToBottom(of: titleLabel).constant = 20
         descriptionLabel.leadingToSuperview().constant = 20
         descriptionLabel.trailingToSuperview().constant = -20
-        
     }
 }
 
@@ -63,5 +62,4 @@ extension HomeMovieHeaderCell {
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.overview
     }
-    
 }

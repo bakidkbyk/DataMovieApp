@@ -24,5 +24,4 @@ public class PageControl: UIPageControl {
         pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.3)
         currentPageIndicatorTintColor = .white
     }
-    
 }
