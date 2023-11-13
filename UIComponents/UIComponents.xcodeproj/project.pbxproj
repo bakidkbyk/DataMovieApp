@@ -28,6 +28,9 @@
 		2D43BB0A2AE09F9200A6702C /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43BB092AE09F9200A6702C /* UIImage+Icons.swift */; };
 		2D43BB0C2AE09FB800A6702C /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43BB0B2AE09FB800A6702C /* UIColor+Colors.swift */; };
 		2D43BB0E2AE0A02400A6702C /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43BB0D2AE0A02400A6702C /* Localize.swift */; };
+		2D48731A2AFF4A0200C874FA /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4873192AFF4A0200C874FA /* UICollectionView+Extensions.swift */; };
+		2D48731D2AFF5BDC00C874FA /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48731B2AFF5BDC00C874FA /* HomeCellModel.swift */; };
+		2D48731E2AFF5BDC00C874FA /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48731C2AFF5BDC00C874FA /* HomeCell.swift */; };
 		2D5CF7862AFE015B0094A74A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */; };
 		2D9C0ACE2AE7D6CB00941255 /* HomeMovieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C0ACD2AE7D6CB00941255 /* HomeMovieHeaderView.swift */; };
 		2D9C0AD12AE7DBD200941255 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C0AD02AE7DBD200941255 /* PageControl.swift */; };
@@ -61,6 +64,9 @@
 		2D43BB092AE09F9200A6702C /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
 		2D43BB0B2AE09FB800A6702C /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		2D43BB0D2AE0A02400A6702C /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		2D4873192AFF4A0200C874FA /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		2D48731B2AFF5BDC00C874FA /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
+		2D48731C2AFF5BDC00C874FA /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		2D9C0ACD2AE7D6CB00941255 /* HomeMovieHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMovieHeaderView.swift; sourceTree = "<group>"; };
 		2D9C0AD02AE7DBD200941255 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */,
+				2D4873192AFF4A0200C874FA /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				2D9C0AD32AE7DC8800941255 /* HomeMovieHeaderCell */,
+				2D48731C2AFF5BDC00C874FA /* HomeCell.swift */,
+				2D48731B2AFF5BDC00C874FA /* HomeCellModel.swift */,
 			);
 			path = HomeCell;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 				2D43BB062AE09F5100A6702C /* Assets.swift in Sources */,
 				2D3F536D2AE33265005B441E /* LoadingProtocol.swift in Sources */,
 				2D3F53682AE33217005B441E /* ToastPresenter.swift in Sources */,
+				2D48731E2AFF5BDC00C874FA /* HomeCell.swift in Sources */,
 				2D9C0ACE2AE7D6CB00941255 /* HomeMovieHeaderView.swift in Sources */,
 				2D43BAFD2AE09EB500A6702C /* StringConstants.swift in Sources */,
 				2D43BB0C2AE09FB800A6702C /* UIColor+Colors.swift in Sources */,
@@ -404,6 +414,8 @@
 				2D43BB082AE09F8300A6702C /* UIImage+Images.swift in Sources */,
 				2D3F536A2AE3322D005B441E /* ToastWarningView.swift in Sources */,
 				2D3F53712AE33283005B441E /* BlockingActivityIndicator.swift in Sources */,
+				2D48731D2AFF5BDC00C874FA /* HomeCellModel.swift in Sources */,
+				2D48731A2AFF4A0200C874FA /* UICollectionView+Extensions.swift in Sources */,
 				2D9C0AD72AE7DCAD00941255 /* HomeMovieHeaderCellModel.swift in Sources */,
 				2D131E9C2AFB99730099432A /* UIFonts+Extensions.swift in Sources */,
 				2D3F536F2AE33273005B441E /* ActivityIndicatorProtocol.swift in Sources */,
