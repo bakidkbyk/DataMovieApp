@@ -61,11 +61,11 @@ extension HomeCell {
         contentView.addSubview(titleAndOverviewStackView)
         titleAndOverviewStackView.addArrangedSubview(titleLabel)
         titleAndOverviewStackView.addArrangedSubview(overViewLabel)
-        
-        titleAndOverviewStackView.edgesToSuperview(excluding: [.trailing, .bottom], insets: .init(top: 30, left: 10, bottom: 0, right: 0))
+        titleAndOverviewStackView.leadingToTrailing(of: imageView).constant = 30
+        titleAndOverviewStackView.edgesToSuperview(excluding: [.left, .bottom], insets: .top(30) + .right(30))
         
         contentView.addSubview(dateLabel)
-        dateLabel.edgesToSuperview(excluding: [.trailing, .top], insets: .init(top: 0, left: 0, bottom: 20, right: 30))
+        dateLabel.edgesToSuperview(excluding: [.left, .top], insets: .init(top: 0, left: 0, bottom: 20, right: 30))
         
         contentView.addSubview(seperatorView)
         seperatorView.bottomToSuperview()
@@ -86,5 +86,9 @@ extension HomeCell {
     
     public func set(viewModel: HomeCellProtocol) {
         self.viewModel = viewModel
+        imageView.setImage(viewModel.backdropPath)
+        titleLabel.text = viewModel.title
+        overViewLabel.text = viewModel.overview
+        dateLabel.text = viewModel.date
     }
 }
