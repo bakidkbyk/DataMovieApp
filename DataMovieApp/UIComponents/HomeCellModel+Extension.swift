@@ -17,7 +17,7 @@ extension HomeCellModel {
         self.init(movieId: dataMovieInfo.movieId,
                   backdropPath: dataMovieInfo.backdropPath,
                   title: dataMovieInfo.title,
-                  overview: dataMovieInfo.overView,
+                  overview: dataMovieInfo.overview,
                   date: dateToString)
     }
 }
