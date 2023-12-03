@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Utilities
 
 public class HomeMovieHeaderCell: UICollectionViewCell, ReusableView {
     
@@ -13,14 +14,20 @@ public class HomeMovieHeaderCell: UICollectionViewCell, ReusableView {
         .contentMode(.scaleToFill)
         .build()
     
-    private let titleLabel = UILabelBuilder()
-        .textColor(.white)
-        .font(.font(.nunitoBold, size: .xLarge))
+    private let stackView = UIStackViewBuilder()
+        .axis(.vertical)
+        .spacing(10)
         .build()
     
+    private let titleLabel = UILabelBuilder()
+        .textColor(.white)
+        .font(.font(.nunitoExtraBold, size: .xLarge))
+        .build()
+
     private let descriptionLabel = UILabelBuilder()
-        .textColor(.black)
+        .textColor(.white)
         .font(.font(.nunitoBold, size: .medium))
+        .numberOfLines(0)
         .build()
     
     weak var viewModel: HomeMovieHeaderCellProtocol?
@@ -43,22 +50,21 @@ extension HomeMovieHeaderCell {
         contentView.addSubview(imageView)
         imageView.edgesToSuperview()
         
-        contentView.addSubview(titleLabel)
-        titleLabel.edgesToSuperview(excluding: [.bottom, .trailing], insets: .init(top: 200, left: 20, bottom: 0, right: 0))
+        contentView.addSubview(stackView)
+        stackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 20, bottom: 40, right: 20))
         
-        contentView.addSubview(descriptionLabel)
-        descriptionLabel.topToBottom(of: titleLabel).constant = 20
-        descriptionLabel.leadingToSuperview().constant = 20
-        descriptionLabel.trailingToSuperview().constant = -20
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(descriptionLabel)
+        
     }
 }
 
 // MARK: - Set View Model
-extension HomeMovieHeaderCell {
+public extension HomeMovieHeaderCell {
     
-    public func set(viewModel: HomeMovieHeaderCellProtocol) {
+    func set(viewModel: HomeMovieHeaderCellProtocol) {
         self.viewModel = viewModel
-        imageView.setImage(viewModel.backdropPath ?? "")
+        imageView.setImage(Base.backdropPathBaseURL + (viewModel.backdropPath ?? ""))
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.overview
     }
