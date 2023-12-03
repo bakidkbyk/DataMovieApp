@@ -19,6 +19,8 @@ target 'DataMovieApp' do
   # UI
   pod 'TinyConstraints', '~> 4.0'
   pod 'MobilliumBuilders', '~> 1.4'
+  pod 'MobilliumDateFormatter', '~> 1.3'
+  pod 'Kingfisher', '~> 6.3'
 
 end
 
@@ -41,6 +43,7 @@ target 'UIComponents' do
   pod 'SwiftGen', '~> 6.0'
   pod 'SwiftEntryKit', '~> 2.0.0'
   pod 'Kingfisher', '~> 6.3'
+  pod 'MobilliumDateFormatter', '~> 1.3'
   
   # UI
   pod 'TinyConstraints', '~> 4.0'

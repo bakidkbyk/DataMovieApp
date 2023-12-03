@@ -88,7 +88,7 @@ number_separator:
   minimum_length: 5
 
 line_length:
-  - 150 #warning
+  - 170 #warning
   - 200 #error
 
 custom_rules:

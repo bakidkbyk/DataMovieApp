@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
+public class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
 
     private let collectionView = UICollectionViewBuilder()
         .scrollDirection(.horizontal)
@@ -27,11 +27,13 @@ class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
+        configureContents()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         addSubviews()
+        configureContents()
     }
 }
 
@@ -66,11 +68,11 @@ extension HomeMovieHeaderView: UICollectionViewDelegate {
 // MARK: - UICollectionView DataSource
 extension HomeMovieHeaderView: UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         homeHeaderData.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: HomeMovieHeaderCell = collectionView.dequeueReusableCell(for: indexPath)
         let cellItem = homeHeaderData[indexPath.row]
         cell.set(viewModel: cellItem)
@@ -81,18 +83,20 @@ extension HomeMovieHeaderView: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension HomeMovieHeaderView: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionCellHeight = collectionView.frame.height
         let collectionViewWidth = collectionView.frame.width
         
         return CGSize(width: collectionViewWidth, height: collectionCellHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 }

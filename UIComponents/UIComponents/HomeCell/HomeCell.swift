@@ -13,6 +13,10 @@ public class HomeCell: UICollectionViewCell, ReusableView {
         .clipsToBounds(true)
         .build()
     
+    private let directionImage = UIImageViewBuilder()
+        .contentMode(.scaleAspectFit)
+        .build()
+    
     private let titleAndOverviewStackView = UIStackViewBuilder()
         .axis(.vertical)
         .spacing(10)
@@ -25,6 +29,7 @@ public class HomeCell: UICollectionViewCell, ReusableView {
     
     private let overViewLabel = UILabelBuilder()
         .font(.font(.nunitoBold, size: .medium))
+        .numberOfLines(2)
         .textColor(.gray)
         .build()
     
@@ -46,7 +51,7 @@ public class HomeCell: UICollectionViewCell, ReusableView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-       addSubviews()
+        addSubviews()
         configureContents()
     }
 }
@@ -61,14 +66,21 @@ extension HomeCell {
         contentView.addSubview(titleAndOverviewStackView)
         titleAndOverviewStackView.addArrangedSubview(titleLabel)
         titleAndOverviewStackView.addArrangedSubview(overViewLabel)
+        
         titleAndOverviewStackView.leadingToTrailing(of: imageView).constant = 30
         titleAndOverviewStackView.edgesToSuperview(excluding: [.left, .bottom], insets: .top(30) + .right(30))
         
         contentView.addSubview(dateLabel)
         dateLabel.edgesToSuperview(excluding: [.left, .top], insets: .init(top: 0, left: 0, bottom: 20, right: 30))
         
+        contentView.addSubview(directionImage)
+        directionImage.leadingToTrailing(of: dateLabel).constant = 10
+        directionImage.trailingToSuperview().constant = -5
+        directionImage.centerYToSuperview()
+
         contentView.addSubview(seperatorView)
         seperatorView.bottomToSuperview()
+        seperatorView.edgesToSuperview(excluding: [.top, .bottom])
     }
 }
 
@@ -76,17 +88,20 @@ extension HomeCell {
 extension HomeCell {
     
     private func configureContents() {
+        imageView.width(100)
+        directionImage.size(.init(width: 10, height: 10))
+        directionImage.image = .arrowIcon
         seperatorView.height(1)
         seperatorView.backgroundColor = .gray
     }
 }
 
 // MARK: - SetViewModel
-extension HomeCell {
+public extension HomeCell {
     
-    public func set(viewModel: HomeCellProtocol) {
+    func set(viewModel: HomeCellProtocol) {
         self.viewModel = viewModel
-        imageView.setImage(viewModel.backdropPath)
+        imageView.setImage(Base.backdropPathBaseURL + (viewModel.backdropPath ?? ""))
         titleLabel.text = viewModel.title
         overViewLabel.text = viewModel.overview
         dateLabel.text = viewModel.date

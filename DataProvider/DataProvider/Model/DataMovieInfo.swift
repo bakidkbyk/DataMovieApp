@@ -8,14 +8,14 @@
 public struct DataMovieInfo: Decodable {
     public let movieId: Int
     public let title: String?
-    public let overView: String?
+    public let overview: String?
     public let date: String?
     public let backdropPath: String?
     
     enum CodingKeys: String, CodingKey {
-        case movieId
+        case movieId = "id"
         case title
-        case overView
+        case overview
         case date = "release_date"
         case backdropPath = "backdrop_path"
     }

@@ -4,6 +4,7 @@
 //
 //  Created by Baki Dikbıyık on 21.10.2023.
 //
+//
 
 class BaseViewController<V: BaseViewModeProtocol>: UIViewController, BaseViewController.LoadingProtocols {
     
