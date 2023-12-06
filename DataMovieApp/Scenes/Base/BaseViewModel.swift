@@ -27,10 +27,8 @@ protocol BaseViewModeProtocol: BaseViewModelDataSource, BaseViewModelEventSource
 
 class BaseViewModel<R: Router>: BaseViewModeProtocol {
     
-    func tryAgainButtonTapped() {
-    }
+    func tryAgainButtonTapped() {}
     
-
     var showActivityIndicatorView: VoidClosure?
     var hideActivityIndicatorView: VoidClosure?
     
