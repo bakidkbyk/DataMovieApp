@@ -31,6 +31,7 @@ final class HomeViewModel: BaseViewModel<HomeRouter>, HomeViewProtocol {
     
     var homecellItems: [HomeCellProtocol] = []
     var homeHeaderMovieCellItems: [HomeMovieHeaderCellProtocol] = []
+    var searchMovieItems: [SearchCellProtocol] = []
     
     func numberOfItemsAt() -> Int {
         return homecellItems.count
@@ -107,6 +108,21 @@ extension HomeViewModel {
             }
             self.isRequestEnabled = false
             self.dispatchGroup.leave()
+        }
+    }
+    
+    func searchMovieRequest(query: String) {
+        let request = SearchMovieRequest(query: query)
+        self.showActivityIndicatorView?()
+        dataProvider.request(for: request) { [weak self] result in
+            guard let self = self else { return }
+            self.hideActivityIndicatorView?()
+            switch result {
+            case .success(let response):
+                self.searchMovieItems = response.results.map({ SearchCellModel(dataMovieInfo: $0) })
+            case.failure(let error):
+                self.showWarningToast?(error.localizedDescription)
+            }
         }
     }
 }
