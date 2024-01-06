@@ -21,5 +21,4 @@ public extension LoadingProtocol where Self: UIViewController {
         let window = UIApplication.shared.windows.first
         window?.stopBlockingActivityIndicator()
     }
-    
 }

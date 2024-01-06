@@ -9,7 +9,16 @@ import UIKit
 
 final class HomeViewController: BaseViewController<HomeViewModel> {
     
-    private let refreshControl = UIRefreshControl()
+    private lazy var searchController: UISearchController = {
+        let searchRouter = SearchRouter()
+        let searchViewModel = SearchViewModel(router: searchRouter)
+        let searchViewController = SearchViewController(viewModel: searchViewModel)
+        searchRouter.viewController = self
+        
+        let searchController = UISearchController(searchResultsController: searchViewController)
+        searchController.searchResultsUpdater = self
+        return searchController
+    }()
     
     private let collectionView = UICollectionViewBuilder()
         .backgroundColor(.clear)
@@ -17,12 +26,22 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
         .showsHorizontalScrollIndicator(false)
         .build()
     
+    private let refreshControl = UIRefreshControl()
+    
+    var searchWorkItem: DispatchWorkItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         configureContents()
         viewModel.getData(showLoading: true)
         subscribeViewModel()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchWorkItem?.cancel()
+        searchWorkItem = nil
     }
 }
 
@@ -40,6 +59,10 @@ extension HomeViewController {
     
     private func configureContents() {
         view.backgroundColor = .white
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.delegate = self
+        navigationItem.titleView = searchController.searchBar
+        definesPresentationContext = true
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerHeader(HomeMovieHeaderView.self )
@@ -70,6 +93,47 @@ extension HomeViewController {
         if refreshControl.isRefreshing {
             viewModel.resetData()
         }
+    }
+}
+
+// MARK: - UpdateSearchResults
+extension HomeViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        searchWorkItem?.cancel()
+        
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        if searchText.count > 2 {
+            let workItem = DispatchWorkItem { [weak self] in
+                self?.viewModel.searchMovieRequest(query: searchText)
+                let searchViewController = searchController.searchResultsController as? SearchViewController
+                searchViewController?.viewModel.cellItems = self?.viewModel.searchMovieItems ?? []
+                self?.viewModel.searchMovieItems.removeAll()
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: workItem)
+            searchWorkItem = workItem
+            
+        } else if searchText.isEmpty {
+            let searchViewController = searchController.searchResultsController as? SearchViewController
+            searchViewController?.viewModel.cellItems.removeAll()
+            viewModel.searchMovieItems.removeAll()
+        }
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchWorkItem?.cancel()
+        searchBar.text = nil
+        
+        if let searchViewController = searchController.searchResultsUpdater as? SearchViewController {
+            searchViewController.viewModel.cellItems.removeAll()
+        }
+        self.viewModel.searchMovieItems.removeAll()
     }
 }
 
