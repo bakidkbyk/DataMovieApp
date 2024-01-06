@@ -35,7 +35,7 @@ extension HomeViewController {
     }
 }
 
-// MARK: - Congigure Contents
+// MARK: - CongigureContents
 extension HomeViewController {
     
     private func configureContents() {
@@ -50,6 +50,19 @@ extension HomeViewController {
     }
 }
 
+// MARK: - UIScrollViewDidScroll
+extension HomeViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffSetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if contentOffSetY > contentHeight - height && viewModel.isPagingEnabled && !viewModel.isRequestEnabled {
+            viewModel.getUpcomingDataMovieRequest()
+        }
+    }
+}
+
 // MARK: Actions
 extension HomeViewController {
     @objc
@@ -60,7 +73,7 @@ extension HomeViewController {
     }
 }
 
-// MARK: Subscribe View Model
+// MARK: SubscribeViewModel
 extension HomeViewController {
     
     private func subscribeViewModel() {
@@ -77,10 +90,10 @@ extension HomeViewController {
     }
 }
 
-// MARK: - UICollectionView Delegate
+// MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {}
 
-// MARK: - UICollectionView DataSource
+// MARK: - UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,12 +121,36 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplaySupplementaryView view: UICollectionReusableView,
+                        forElementKind elementKind: String,
+                        at indexPath: IndexPath) {
+
+        if elementKind == UICollectionView.elementKindSectionFooter,
+           let view = view as? ActivityIndicatorFooterView,
+           viewModel.isPagingEnabled {
+            view.startLoading()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplayingSupplementaryView view: UICollectionReusableView,
+                        forElementOfKind elementKind: String,
+                        at indexPath: IndexPath) {
+
+        if elementKind == UICollectionView.elementKindSectionFooter,
+           let view = view as? ActivityIndicatorFooterView,
+           viewModel.isPagingEnabled {
+            view.stopLoading()
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return .init(width: view.frame.width, height: 350)
     }
 }
 
-// MARK: - UICollectionView DelegateFlowLayout
+// MARK: - UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
@@ -129,5 +166,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 50)
     }
 }

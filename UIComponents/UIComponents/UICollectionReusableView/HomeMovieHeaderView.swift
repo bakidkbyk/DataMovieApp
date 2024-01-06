@@ -11,6 +11,8 @@ public class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
 
     private let collectionView = UICollectionViewBuilder()
         .scrollDirection(.horizontal)
+        .showsHorizontalScrollIndicator(false)
+        .isPagingEnabled(true)
         .backgroundColor(.clear)
         .build()
     
@@ -50,7 +52,7 @@ extension HomeMovieHeaderView {
     }
 }
 
-// MARK: - Configure Contents
+// MARK: - ConfigureContents
 extension HomeMovieHeaderView {
     
     private func configureContents() {
@@ -60,12 +62,21 @@ extension HomeMovieHeaderView {
     }
 }
 
-// MARK: - UICollectionView Delegate
-extension HomeMovieHeaderView: UICollectionViewDelegate {
+// MARK: - UIScrollViewDidScroll
+extension HomeMovieHeaderView {
     
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetX = scrollView.contentOffset.x
+        let contentWidth = scrollView.frame.width
+        let currentPage = Int(contentOffsetX / contentWidth)
+        pageContol.currentPage = currentPage
+    }
 }
 
-// MARK: - UICollectionView DataSource
+// MARK: - UICollectionViewDelegate
+extension HomeMovieHeaderView: UICollectionViewDelegate {}
+
+// MARK: - UICollectionViewDataSource
 extension HomeMovieHeaderView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
