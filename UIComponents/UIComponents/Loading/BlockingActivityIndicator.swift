@@ -53,4 +53,3 @@ extension UIWindow {
         subviews.filter({ $0 is BlockingActivityIndicator }).forEach({ $0.removeFromSuperview() })
     }
 }
-

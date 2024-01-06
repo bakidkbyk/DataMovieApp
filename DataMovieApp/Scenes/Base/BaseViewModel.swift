@@ -16,12 +16,21 @@ protocol BaseViewModelEventSource: AnyObject {
     
     var showWarningToast: StringClosure? { get set }
     var showSuccessToast: StringClosure? { get set }
+    
+    var showTryAgainButton: VoidClosure? { get set }
+    var hideTryAgainButton: VoidClosure? { get set }
 }
 
-protocol BaseViewModeProtocol: BaseViewModelDataSource, BaseViewModelEventSource { }
+protocol BaseViewModeProtocol: BaseViewModelDataSource, BaseViewModelEventSource {
+    func tryAgainButtonTapped()
+}
 
 class BaseViewModel<R: Router>: BaseViewModeProtocol {
     
+    func tryAgainButtonTapped() {
+    }
+    
+
     var showActivityIndicatorView: VoidClosure?
     var hideActivityIndicatorView: VoidClosure?
     
@@ -30,6 +39,9 @@ class BaseViewModel<R: Router>: BaseViewModeProtocol {
     
     var showWarningToast: StringClosure?
     var showSuccessToast: StringClosure?
+    
+    var showTryAgainButton: VoidClosure?
+    var hideTryAgainButton: VoidClosure?
     
     let router: R
     let dataProvider: DataProviderProtocol

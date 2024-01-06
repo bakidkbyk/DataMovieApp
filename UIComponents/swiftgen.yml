@@ -1,10 +1,10 @@
 fonts:
   inputs: UIComponents/Resources/Fonts
   outputs:
-    templateName: swift5
-    output: UIComponents/Resources/Fonts/Fonts.swift
-    params:
-        publicAccess: public
+    - templateName: swift5
+      output: UIComponents/Resources/Fonts/Fonts.swift
+      params:
+          publicAccess: public
 
 strings:
   inputs: UIComponents/Resources/Strings/Localizable.strings

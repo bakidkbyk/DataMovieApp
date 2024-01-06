@@ -5,4 +5,4 @@
 //  Created by Baki Dikbıyık on 24.10.2023.
 //
 
-final class HomeRouter: Router {}
+final class HomeRouter: Router { }

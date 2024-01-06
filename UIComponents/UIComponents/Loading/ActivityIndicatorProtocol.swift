@@ -8,7 +8,6 @@
 public protocol ActivityIndicatorProtocol {
     func showActivityIndicator()
     func hideActivityIndicator()
-
 }
 
 public extension ActivityIndicatorProtocol where Self: UIViewController {

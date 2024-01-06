@@ -19,7 +19,7 @@ public protocol HomeMovieHeaderCellProtocol: HomeMovieHeaderCellDataSource, Home
 }
 
 public final class HomeMovieHeaderCellModel: HomeMovieHeaderCellProtocol {
-    
+
     public var backdropPath: String?
     public var id: Int
     public var title: String?

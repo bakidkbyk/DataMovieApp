@@ -6,4 +6,6 @@
   
 */
 
-"ViewController.title" = "Title";
+// MARK: - Base Controller
+"BaseController.tryAgainButtonText" = "Tekrar Dene";
+"BaseController.test" = "test";

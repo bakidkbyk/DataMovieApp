@@ -4,6 +4,7 @@
 //
 //  Created by Baki Dikbıyık on 18.10.2023.
 //
+//
 
 import UIKit
 
@@ -19,5 +20,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppRouter.shared.startApp()
         return true
     }
-
 }
