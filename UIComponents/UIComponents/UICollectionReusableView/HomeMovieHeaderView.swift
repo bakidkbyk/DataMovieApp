@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Utilities
 
 public class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
 
@@ -25,6 +26,8 @@ public class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
             pageContol.numberOfPages = homeHeaderData.count
         }
     }
+    
+    public var didSelectItemAtClosure: IntClosure?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

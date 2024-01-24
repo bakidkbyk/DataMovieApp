@@ -59,12 +59,13 @@ final class HomeViewModel: BaseViewModel<HomeRouter>, HomeViewProtocol {
 // MARK: - Actions
 extension HomeViewModel {
     
-    func didSelectHeaderMovie(indexPath: IndexPath) {
-        // TODO: - Detail Sayfasına yönlendirme sağlanacak
+    func didSelectMovie(indexPath: IndexPath) {
+        let movieId = homecellItems[indexPath.row].movieId
+        router.pushMovieDetail(movieId: movieId)
     }
     
-    func didSelectMovieDetail(indexPath: IndexPath) {
-        // TODO: - Detail Sayfasına yönlendirme sağlanacak
+    func didSelectHeaderMovie(indexPath: IndexPath, movieId: Int) {
+        router.pushMovieDetail(movieId: movieId)
     }
 }
 

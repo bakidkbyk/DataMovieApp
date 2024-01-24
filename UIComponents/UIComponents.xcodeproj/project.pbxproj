@@ -31,6 +31,7 @@
 		2D48731D2AFF5BDC00C874FA /* HomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48731B2AFF5BDC00C874FA /* HomeCellModel.swift */; };
 		2D48731E2AFF5BDC00C874FA /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48731C2AFF5BDC00C874FA /* HomeCell.swift */; };
 		2D5CF7862AFE015B0094A74A /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */; };
+		2D8CB1B72B49BC6B00AB29F5 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CB1B62B49BC6B00AB29F5 /* MovieDetailView.swift */; };
 		2D9884D72B34C88C00EC9B82 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D9884D42B34C88C00EC9B82 /* Nunito-SemiBold.ttf */; };
 		2D9884D82B34C88C00EC9B82 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D9884D52B34C88C00EC9B82 /* Nunito-ExtraBold.ttf */; };
 		2D9884D92B34C88C00EC9B82 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D9884D62B34C88C00EC9B82 /* Nunito-Bold.ttf */; };
@@ -70,6 +71,7 @@
 		2D48731B2AFF5BDC00C874FA /* HomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellModel.swift; sourceTree = "<group>"; };
 		2D48731C2AFF5BDC00C874FA /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		2D5CF7852AFE015B0094A74A /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		2D8CB1B62B49BC6B00AB29F5 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		2D9884D42B34C88C00EC9B82 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		2D9884D52B34C88C00EC9B82 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		2D9884D62B34C88C00EC9B82 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		2D43BAED2AE09A7700A6702C /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2D8CB1B52B49BC4A00AB29F5 /* UIView */,
 				2D9AFF2A2B27912B00F06D00 /* Cell */,
 				2D5CF7842AFE013B0094A74A /* Extensions */,
 				2DF016332AEA0E3200696EDA /* Protocols */,
@@ -215,6 +218,14 @@
 				2D4873192AFF4A0200C874FA /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D8CB1B52B49BC4A00AB29F5 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				2D8CB1B62B49BC6B00AB29F5 /* MovieDetailView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		2D9AFF1F2B277D4800F06D00 /* SearchCell */ = {
@@ -442,6 +453,7 @@
 				2DEB1A462B107FBD00C9B673 /* ActivityIndicatorFooterView.swift in Sources */,
 				2D43BB0C2AE09FB800A6702C /* UIColor+Colors.swift in Sources */,
 				2D43BB0A2AE09F9200A6702C /* UIImage+Icons.swift in Sources */,
+				2D8CB1B72B49BC6B00AB29F5 /* MovieDetailView.swift in Sources */,
 				2D9AFF262B277D7E00F06D00 /* SearchCell.swift in Sources */,
 				2DC85E292B086597005645D3 /* Fonts.swift in Sources */,
 				2D5CF7862AFE015B0094A74A /* UIImageView+Extensions.swift in Sources */,
