@@ -71,8 +71,17 @@ final class MovieDetailViewController: BaseViewController<MovieDetailViewModel> 
         .numberOfLines(0)
         .build()
     
-    private let testView = UIViewBuilder()
+    private let similarsStackView = UIStackViewBuilder()
+        .axis(.vertical)
+        .spacing(0)
         .build()
+    
+    private let similarsTitleLabel = UILabelBuilder()
+        .font(.font(.nunitoBold, size: .xxLarge))
+        .textColor(.black)
+        .build()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
