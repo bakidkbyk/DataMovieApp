@@ -171,11 +171,18 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectMovie(indexPath: indexPath)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let headerView: HomeMovieHeaderView = collectionView.dequeueReusableCell(ofKind: kind, for: indexPath)
             headerView.homeHeaderData = viewModel.homeHeaderMovieCellItems
-            viewModel.didSelectHeaderMovie(indexPath: indexPath)
+            headerView.didSelectItemAtClosure = { [weak self] movieId in
+                guard let self = self else { return }
+                self.viewModel.didSelectHeaderMovie(indexPath: indexPath, movieId: movieId)
+            }
             return headerView
         } else if kind == UICollectionView.elementKindSectionFooter {
             let footerView: ActivityIndicatorFooterView = collectionView.dequeueReusableCell(ofKind: kind, for: indexPath)

@@ -43,7 +43,7 @@ public class HomeMovieHeaderCell: UICollectionViewCell, ReusableView {
     }
 }
 
-// MARK: - UILauyout
+// MARK: - UILayout
 extension HomeMovieHeaderCell {
     
     private func addSubviews() {
@@ -59,7 +59,7 @@ extension HomeMovieHeaderCell {
     }
 }
 
-// MARK: - Set View Model
+// MARK: - SetViewModel
 public extension HomeMovieHeaderCell {
     
     func set(viewModel: HomeMovieHeaderCellProtocol) {

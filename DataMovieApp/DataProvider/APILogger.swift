@@ -11,7 +11,7 @@ final class APILogger: EventMonitor {
     
     static let shared = APILogger()
     
-    let queue = DispatchQueue(label: "com.mobillium.sampleproject.networklogger")
+    let queue = DispatchQueue(label: "com.mobillium.dataMovieApp.networklogger")
     
     func request(_ request: Request, didCreateURLRequest urlRequest: URLRequest) {
         print("---> Request Created <---")
