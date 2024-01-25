@@ -9,3 +9,7 @@
 // MARK: - Base Controller
 "BaseController.tryAgainButtonText" = "Tekrar Dene";
 "BaseController.test" = "test";
+
+// MARK: - MovieDetail Controller
+"MovieDetailController.similarTitle" = "Benzer Filmler";
+"MovieDetailController.topTitleRating" = "/10";
