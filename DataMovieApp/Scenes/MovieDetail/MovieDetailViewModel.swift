@@ -12,6 +12,9 @@ protocol MovieDetailViewDataSource {
     var title: String? { get }
     var overview: String? { get }
     var rateRating: Double? { get }
+    
+    func numberOfItemsAt() -> Int
+    func cellItemAt(_ indexPath: IndexPath) -> MovieDetailSimilarCellProtocol
 }
 
 protocol MovieDetailViewEventSource {}
@@ -19,6 +22,16 @@ protocol MovieDetailViewEventSource {}
 protocol MovieDetailViewProtocol: MovieDetailViewDataSource, MovieDetailViewEventSource {}
 
 final class MovieDetailViewModel: BaseViewModel<MovieDetailRouter>, MovieDetailViewProtocol {
+    
+    func numberOfItemsAt() -> Int {
+        return cellItems.count
+    }
+    
+    func cellItemAt(_ indexPath: IndexPath) -> MovieDetailSimilarCellProtocol {
+        return cellItems[indexPath.row]
+    }
+    
+    var cellItems = [MovieDetailSimilarCellProtocol]()
     
     var backdropPath: String?
     var movieRating: String?
@@ -52,6 +65,22 @@ extension MovieDetailViewModel {
                 self.isGetDataDidSuccess?()
             case .failure(let error):
                 self.showWarningToast?(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getSimilar() {
+        let request = SimilarMoviesRequest(movieId: movieId)
+        self.showActivityIndicatorView?()
+        dataProvider.request(for: request) { [weak self] result in
+            self?.hideActivityIndicatorView?()
+            switch result {
+            case .success(let response):
+                let cellItems = response.results.map( {MovieDetailSimilarCellModel(similarMovie: $0) })
+                self?.cellItems.append(contentsOf: cellItems)
+                self?.isGetDataDidSuccess?()
+            case .failure(let error):
+                self?.showWarningToast?(error.localizedDescription)
             }
         }
     }
