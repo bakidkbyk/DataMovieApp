@@ -5,7 +5,6 @@
 //  Created by Baki Dikbıyık on 24.01.2024.
 //
 
-
 public class MovieDetailSimilarCell: UICollectionViewCell, ReusableView {
     
     private let imageView = UIImageViewBuilder()
@@ -15,8 +14,9 @@ public class MovieDetailSimilarCell: UICollectionViewCell, ReusableView {
         .build()
     
     private let titleLabel = UILabelBuilder()
-        .font(.font(.nunitoBold, size: .xxLarge))
+        .font(.font(.nunitoBold, size: .xLarge))
         .textColor(.black)
+        .numberOfLines(0)
         .build()
     
     weak var viewModel: MovieDetailSimilarCellProtocol?
@@ -41,7 +41,7 @@ extension MovieDetailSimilarCell {
         imageView.height(100)
         
         contentView.addSubview(titleLabel)
-        titleLabel.topToBottom(of: imageView).constant = 10
+        titleLabel.topToBottom(of: imageView).constant = 5
         titleLabel.edgesToSuperview(excluding: .top)
     }
 }

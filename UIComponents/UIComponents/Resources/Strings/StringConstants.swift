@@ -17,6 +17,13 @@ public enum L10n {
     /// Tekrar Dene
     public static let tryAgainButtonText = L10n.tr("Localizable", "BaseController.tryAgainButtonText")
   }
+
+  public enum MovieDetailController {
+    /// Benzer Filmler
+    public static let similarTitle = L10n.tr("Localizable", "MovieDetailController.similarTitle")
+    /// /10
+    public static let topTitleRating = L10n.tr("Localizable", "MovieDetailController.topTitleRating")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

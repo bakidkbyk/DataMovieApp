@@ -23,12 +23,12 @@ public protocol MovieDetailSimilarCellProtocol: MovieDetailSimilarCellDataSource
 
 public final class MovieDetailSimilarCellModel: MovieDetailSimilarCellProtocol {
     public var movieId: Int
+    public var backdropPath: String?
     public var title: String?
-    public var date: String?
     
-    public init(movieId: Int, title: String?, date: String?) {
+    public init(movieId: Int, backdropPath: String?, title: String?) {
         self.movieId = movieId
+        self.backdropPath = backdropPath
         self.title = title
-        self.date = date
     }
 }
