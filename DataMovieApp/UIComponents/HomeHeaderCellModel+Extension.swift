@@ -10,5 +10,4 @@ extension HomeMovieHeaderCellModel {
     convenience init(dataMovieInfo: DataMovieInfo) {
         self.init(backdropPath: dataMovieInfo.backdropPath, id: dataMovieInfo.movieId, title: dataMovieInfo.title, overview: dataMovieInfo.overview)
     } 
-    
 }
