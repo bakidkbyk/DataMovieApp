@@ -32,6 +32,7 @@ final class MovieDetailViewModel: BaseViewModel<MovieDetailRouter>, MovieDetailV
     }
     
     var cellItems = [MovieDetailSimilarCellProtocol]()
+    var movieTrailerCellItems = [MovieDetailTrailerCellProtocol]()
     
     var backdropPath: String?
     var movieRating: String?

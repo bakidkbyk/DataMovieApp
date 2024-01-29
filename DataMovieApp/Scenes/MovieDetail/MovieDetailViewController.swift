@@ -71,6 +71,8 @@ final class MovieDetailViewController: BaseViewController<MovieDetailViewModel> 
         .numberOfLines(0)
         .build()
     
+    private let movieDetailTrailerView = MovieDetailTrailerView()
+    
     private let similarStackView = UIStackViewBuilder()
         .axis(.vertical)
         .spacing(10)
@@ -84,7 +86,7 @@ final class MovieDetailViewController: BaseViewController<MovieDetailViewModel> 
     private let similarCollectionView = UICollectionViewBuilder()
         .scrollDirection(.horizontal)
         .build()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -95,7 +97,6 @@ final class MovieDetailViewController: BaseViewController<MovieDetailViewModel> 
         viewModel.getDetail()
         viewModel.getSimilar()
     }
-
 }
 
 // MARK: - UILayout
@@ -151,6 +152,9 @@ extension MovieDetailViewController {
         
         titleAndDescriptionStackView.addArrangedSubview(movieTitleLabel)
         titleAndDescriptionStackView.addArrangedSubview(descriptionLabel)
+        
+        contentView.addSubview(movieDetailTrailerView)
+        
     }
     
     private func addSimilarStackView() {
@@ -184,6 +188,7 @@ extension MovieDetailViewController {
         dateLabel.text = viewModel.date
         movieTitleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.overview
+        movieDetailTrailerView.movieTrailerData = viewModel.movieTrailerCellItems
     }
 }
 
