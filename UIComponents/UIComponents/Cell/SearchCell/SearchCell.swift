@@ -16,7 +16,7 @@ public class SearchCell: UICollectionViewCell, ReusableView {
     
     private let searchStackView = UIStackViewBuilder()
         .axis(.horizontal)
-        .spacing(10)
+        .spacing(5)
         .build()
     
     private let titleLabel = UILabelBuilder()
@@ -29,7 +29,7 @@ public class SearchCell: UICollectionViewCell, ReusableView {
         .textColor(.gray)
         .build()
     
-    weak var viewModel: SearchCellProtocol?
+    weak var viewModel: SearchCellModelProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,14 +58,13 @@ extension SearchCell {
         
         searchStackView.addArrangedSubview(titleLabel)
         searchStackView.addArrangedSubview(dateLabel)
-        
     }
 }
 
 // MARK: - SetViewModel
 extension SearchCell {
     
-    public func set(viewModel: SearchCellProtocol) {
+    public func set(viewModel: SearchCellModelProtocol) {
         self.viewModel = viewModel
         titleLabel.text = viewModel.title
         dateLabel.text = viewModel.date

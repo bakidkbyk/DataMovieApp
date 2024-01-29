@@ -5,23 +5,21 @@
 //  Created by Baki Dikbıyık on 11.12.2023.
 //
 
-import Foundation
-
-public protocol SearchCellDataSource: AnyObject {
+public protocol SearchCellModelDataSource: AnyObject {
     var movieId: Int { get }
     var title: String? { get }
     var date: String? { get }
 }
 
-public protocol SearchCellEventSource: AnyObject {
+public protocol SearchCellModelEventSource: AnyObject {
     
 }
 
-public protocol SearchCellProtocol: SearchCellDataSource, SearchCellEventSource {
+public protocol SearchCellModelProtocol: SearchCellModelDataSource, SearchCellModelEventSource {
     
 }
 
-public final class SearchCellModel: SearchCellProtocol {
+public final class SearchCellModel: SearchCellModelProtocol {
     
     public var movieId: Int
     public var title: String?

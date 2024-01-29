@@ -5,4 +5,6 @@
 //  Created by Baki Dikbıyık on 6.01.2024.
 //
 
-final class MovieDetailRouter: Router {}
+final class MovieDetailRouter: Router, MovieDetailRouter.Routes {
+    typealias Routes = MovieDetailRoute
+}

@@ -31,7 +31,7 @@ final class HomeViewModel: BaseViewModel<HomeRouter>, HomeViewProtocol {
     
     var homecellItems: [HomeCellProtocol] = []
     var homeHeaderMovieCellItems: [HomeMovieHeaderCellProtocol] = []
-    var searchMovieItems: [SearchCellProtocol] = []
+    var searchMovieItems: [SearchCellModelProtocol] = []
     
     func numberOfItemsAt() -> Int {
         return homecellItems.count

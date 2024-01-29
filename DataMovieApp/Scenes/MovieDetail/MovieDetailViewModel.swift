@@ -97,3 +97,12 @@ extension MovieDetailViewModel {
         rateRating = dataMovieInfo.movieRating
     }
 }
+
+// MARK: Actions
+extension MovieDetailViewModel {
+    
+    func didSelectSimilarDetail(indexPath: IndexPath) {
+        let movieId = cellItems[indexPath.row].movieId
+        router.pushMovieDetail(movieId: movieId)
+    }
+}

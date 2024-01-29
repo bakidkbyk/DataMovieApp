@@ -77,7 +77,13 @@ extension HomeMovieHeaderView {
 }
 
 // MARK: - UICollectionViewDelegate
-extension HomeMovieHeaderView: UICollectionViewDelegate {}
+extension HomeMovieHeaderView: UICollectionViewDelegate {
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieId = homeHeaderData[indexPath.row].id
+        didSelectItemAtClosure?(movieId)
+    }
+}
 
 // MARK: - UICollectionViewDataSource
 extension HomeMovieHeaderView: UICollectionViewDataSource {

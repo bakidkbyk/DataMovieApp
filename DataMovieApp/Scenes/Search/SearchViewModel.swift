@@ -5,7 +5,6 @@
 //  Created by Baki Dikbıyık on 9.12.2023.
 //
 
-import Foundation
 
 protocol SearchViewDataSource {}
 
@@ -17,7 +16,7 @@ final class SearchViewModel: BaseViewModel<SearchRouter>, SearchViewProtocol {
     
     var reloadData: VoidClosure?
     
-    public var cellItems: [SearchCellProtocol] = [] {
+    public var cellItems: [SearchCellModelProtocol] = [] {
         didSet {
             self.reloadData?()
         }
