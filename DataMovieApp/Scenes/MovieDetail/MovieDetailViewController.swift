@@ -95,6 +95,7 @@ final class MovieDetailViewController: BaseViewController<MovieDetailViewModel> 
         viewModel.getDetail()
         viewModel.getSimilar()
     }
+
 }
 
 // MARK: - UILayout
@@ -166,7 +167,6 @@ extension MovieDetailViewController {
     
     private func configureContents() {
         view.backgroundColor = .white
-        navigationItem.backBarButtonItem = UIBarButtonItem(image: .backArrowIcon, style: .plain, target: nil, action: nil)
         similarCollectionView.height(150)
         similarCollectionView.register(MovieDetailSimilarCell.self)
         similarCollectionView.delegate = self
@@ -200,7 +200,12 @@ extension MovieDetailViewController {
 }
 
 // MARK: - UICollectionViewDelegate
-extension MovieDetailViewController: UICollectionViewDelegate {}
+extension MovieDetailViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectSimilarDetail(indexPath: indexPath)
+    }
+}
 
 // MARK: - UICollectionViewDataSource
 extension MovieDetailViewController: UICollectionViewDataSource {

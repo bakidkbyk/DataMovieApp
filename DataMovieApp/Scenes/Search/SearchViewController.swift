@@ -21,7 +21,6 @@ final class SearchViewController: BaseViewController<SearchViewModel> {
         subscribeViewModel()
         view.backgroundColor = .white
     }
-    
 }
 
 // MARK: - UILayout
@@ -68,11 +67,6 @@ extension SearchViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if viewModel.cellItems.isEmpty {
-            collectionView.isHidden = viewModel.cellItems.isEmpty
-        } else {
-            collectionView.isHidden = viewModel.cellItems.isEmpty
-        }
         return viewModel.cellItems.count
     }
 }
@@ -83,8 +77,7 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = collectionView.frame.size
-        return CGSize(width: size.width, height: 50)
+        return CGSize(width: collectionView.frame.size.width, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView,

@@ -164,7 +164,6 @@
 		2D43BAED2AE09A7700A6702C /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				2D8CB1B52B49BC4A00AB29F5 /* UIView */,
 				2D9AFF2A2B27912B00F06D00 /* Cell */,
 				2D5CF7842AFE013B0094A74A /* Extensions */,
 				2DF016332AEA0E3200696EDA /* Protocols */,
@@ -229,13 +228,6 @@
 				2D83E7502B61155900E74320 /* MovieDetailSimilarCellModel.swift */,
 			);
 			path = MovieDeatailsCell;
-			sourceTree = "<group>";
-		};
-		2D8CB1B52B49BC4A00AB29F5 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIView;
 			sourceTree = "<group>";
 		};
 		2D9AFF1F2B277D4800F06D00 /* SearchCell */ = {

@@ -16,7 +16,6 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
         searchRouter.viewController = self
         
         let searchController = UISearchController(searchResultsController: searchViewController)
-        searchController.searchResultsUpdater = self
         return searchController
     }()
     
@@ -28,20 +27,19 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
     
     private let refreshControl = UIRefreshControl()
     
-    var searchWorkItem: DispatchWorkItem?
+    var searchTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         configureContents()
-        viewModel.getData(showLoading: true)
         subscribeViewModel()
+        viewModel.getData(showLoading: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        searchWorkItem?.cancel()
-        searchWorkItem = nil
+        
     }
 }
 
@@ -59,8 +57,10 @@ extension HomeViewController {
     
     private func configureContents() {
         view.backgroundColor = .white
+        definesPresentationContext = true
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         navigationItem.titleView = searchController.searchBar
         definesPresentationContext = true
         collectionView.delegate = self
@@ -100,21 +100,18 @@ extension HomeViewController {
 extension HomeViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        searchWorkItem?.cancel()
-        
+        searchTimer?.invalidate()
+        searchTimer = nil
         guard let searchText = searchController.searchBar.text else { return }
         
         if searchText.count > 2 {
-            let workItem = DispatchWorkItem { [weak self] in
-                self?.viewModel.searchMovieRequest(query: searchText)
+            searchTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
+                guard let self = self else { return}
+                self.viewModel.searchMovieRequest(query: searchText)
                 let searchViewController = searchController.searchResultsController as? SearchViewController
-                searchViewController?.viewModel.cellItems = self?.viewModel.searchMovieItems ?? []
-                self?.viewModel.searchMovieItems.removeAll()
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: workItem)
-            searchWorkItem = workItem
-            
+                searchViewController?.viewModel.cellItems = self.viewModel.searchMovieItems
+                self.viewModel.searchMovieItems.removeAll()
+            })
         } else if searchText.isEmpty {
             let searchViewController = searchController.searchResultsController as? SearchViewController
             searchViewController?.viewModel.cellItems.removeAll()
@@ -127,13 +124,9 @@ extension HomeViewController: UISearchResultsUpdating {
 extension HomeViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchWorkItem?.cancel()
-        searchBar.text = nil
-        
-        if let searchViewController = searchController.searchResultsUpdater as? SearchViewController {
-            searchViewController.viewModel.cellItems.removeAll()
-        }
-        self.viewModel.searchMovieItems.removeAll()
+        let searchViewController = searchController.searchResultsController as? SearchViewController
+        searchViewController?.viewModel.cellItems.removeAll()
+        viewModel.searchMovieItems.removeAll()
     }
 }
 
@@ -196,7 +189,7 @@ extension HomeViewController: UICollectionViewDataSource {
                         willDisplaySupplementaryView view: UICollectionReusableView,
                         forElementKind elementKind: String,
                         at indexPath: IndexPath) {
-
+        
         if elementKind == UICollectionView.elementKindSectionFooter,
            let view = view as? ActivityIndicatorFooterView,
            viewModel.isPagingEnabled {
@@ -208,7 +201,7 @@ extension HomeViewController: UICollectionViewDataSource {
                         didEndDisplayingSupplementaryView view: UICollectionReusableView,
                         forElementOfKind elementKind: String,
                         at indexPath: IndexPath) {
-
+        
         if elementKind == UICollectionView.elementKindSectionFooter,
            let view = view as? ActivityIndicatorFooterView,
            viewModel.isPagingEnabled {
