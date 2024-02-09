@@ -13,13 +13,9 @@ public protocol MovieDetailSimilarCellDataSource: AnyObject {
     var title: String? { get }
 }
 
-public protocol MovieDetailSimilarCellEventSource: AnyObject {
-    
-}
+public protocol MovieDetailSimilarCellEventSource: AnyObject {}
 
-public protocol MovieDetailSimilarCellProtocol: MovieDetailSimilarCellDataSource, MovieDetailSimilarCellEventSource {
-    
-}
+public protocol MovieDetailSimilarCellProtocol: MovieDetailSimilarCellDataSource, MovieDetailSimilarCellEventSource {}
 
 public final class MovieDetailSimilarCellModel: MovieDetailSimilarCellProtocol {
     public var movieId: Int

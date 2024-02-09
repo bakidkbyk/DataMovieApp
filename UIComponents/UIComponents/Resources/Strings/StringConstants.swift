@@ -23,6 +23,8 @@ public enum L10n {
     public static let similarTitle = L10n.tr("Localizable", "MovieDetailController.similarTitle")
     /// /10
     public static let topTitleRating = L10n.tr("Localizable", "MovieDetailController.topTitleRating")
+    /// TRAILERS
+    public static let trailersVideosTitle = L10n.tr("Localizable", "MovieDetailController.trailersVideosTitle")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -52,12 +52,13 @@ extension SearchCell {
         searhImageView.size(.init(width: 20, height: 20))
         
         contentView.addSubview(searchStackView)
-        searchStackView.leadingToTrailing(of: searhImageView).constant = -10
-        searchStackView.trailingToSuperview().constant = -10
+        searchStackView.leadingToTrailing(of: searhImageView).constant = 10
         searchStackView.centerYToSuperview()
-        
+        searchStackView.trailingToSuperview().constant = -10
         searchStackView.addArrangedSubview(titleLabel)
+        titleLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         searchStackView.addArrangedSubview(dateLabel)
+        dateLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
     }
 }
 

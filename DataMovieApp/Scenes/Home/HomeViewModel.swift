@@ -71,7 +71,7 @@ extension HomeViewModel {
 
 // MARK: - Network
 extension HomeViewModel {
-    
+     
     func nowPlayingDataMovieRequest() {
         let request = NowPlayingDataMovieRequest()
         dispatchGroup.enter()

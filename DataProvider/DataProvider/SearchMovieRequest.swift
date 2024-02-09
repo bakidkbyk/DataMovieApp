@@ -9,7 +9,7 @@ public struct SearchMovieRequest: APIDecodableResponseRequest {
     
     public typealias ResponseType = DataMovieResponse
     
-    public var path: String = "search/movie"
+    public let path: String = "search/movie"
     public let method: RequestMethod = .get
     public var parameters: RequestParameters = [:]
     

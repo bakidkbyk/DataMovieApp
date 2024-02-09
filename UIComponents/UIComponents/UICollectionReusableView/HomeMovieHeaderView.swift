@@ -5,8 +5,6 @@
 //  Created by Baki Dikbıyık on 24.10.2023.
 //
 
-import UIKit
-import Utilities
 
 public class HomeMovieHeaderView: UICollectionReusableView, ReusableView {
 
