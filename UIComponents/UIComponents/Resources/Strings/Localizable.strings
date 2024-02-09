@@ -13,4 +13,4 @@
 // MARK: - MovieDetail Controller
 "MovieDetailController.similarTitle" = "Benzer Filmler";
 "MovieDetailController.topTitleRating" = "/10";
-"MovieDetailController.trailersVideosTitle" = "Trailers";
+"MovieDetailController.trailersVideosTitle" = "TRAILERS";

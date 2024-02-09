@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1CF1812B685F2A005CF3AC /* MovieDetailTrailerCellModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1CF1802B685F2A005CF3AC /* MovieDetailTrailerCellModel+Extension.swift */; };
 		2D1E210A2AE1126B00EEF185 /* DismissableRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E21092AE1126B00EEF185 /* DismissableRoute.swift */; };
 		2D1E210E2AE1129200EEF185 /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E210D2AE1129200EEF185 /* ModalTransition.swift */; };
 		2D1E21102AE112A800EEF185 /* PlaceOnWindowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E210F2AE112A800EEF185 /* PlaceOnWindowTransition.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D1CF1802B685F2A005CF3AC /* MovieDetailTrailerCellModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieDetailTrailerCellModel+Extension.swift"; sourceTree = "<group>"; };
 		2D1E21092AE1126B00EEF185 /* DismissableRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableRoute.swift; sourceTree = "<group>"; };
 		2D1E210D2AE1129200EEF185 /* ModalTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
 		2D1E210F2AE112A800EEF185 /* PlaceOnWindowTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOnWindowTransition.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				2DD621322B02C30600E57105 /* HomeCellModel+Extension.swift */,
 				2DD378442B28D0FB0030C856 /* SearchCellModel+Extension.swift */,
 				2D83E7562B61223300E74320 /* MovieDetailSimilarCellModel+Extension.swift */,
+				2D1CF1802B685F2A005CF3AC /* MovieDetailTrailerCellModel+Extension.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				2DA6FEC12AE72BE60077125D /* HomeViewController.swift in Sources */,
 				2DA6FEC22AE72BE60077125D /* HomeViewModel.swift in Sources */,
 				2D8CB1B12B49BBE500AB29F5 /* MovieDetailViewController.swift in Sources */,
+				2D1CF1812B685F2A005CF3AC /* MovieDetailTrailerCellModel+Extension.swift in Sources */,
 				2D3F53622AE3314B005B441E /* BaseViewModel.swift in Sources */,
 				2D1E211A2AE112FE00EEF185 /* Router.swift in Sources */,
 				2DD358B02AE14613001D1EA5 /* APIDataProvider.swift in Sources */,

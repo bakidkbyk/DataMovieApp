@@ -19,7 +19,6 @@ final class SearchViewController: BaseViewController<SearchViewModel> {
         addSubviews()
         configureContents()
         subscribeViewModel()
-        view.backgroundColor = .white
     }
 }
 
@@ -54,7 +53,12 @@ extension SearchViewController {
 }
 
 // MARK: - CollectionViewDelegate
-extension SearchViewController: UICollectionViewDelegate { }
+extension SearchViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectMovieDetail(indexPath: indexPath)
+    }
+}
 
 // MARK: - CollectionViewDataSource
 extension SearchViewController: UICollectionViewDataSource {

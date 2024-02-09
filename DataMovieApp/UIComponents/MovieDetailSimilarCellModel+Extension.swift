@@ -14,5 +14,6 @@ public extension MovieDetailSimilarCellModel {
         self.init(movieId: similarMovie.movieId,
                   backdropPath: Base.backdropPathBaseURL + (similarMovie.backdropPath ?? ""),
                   title: "\(similarMovie.title ?? "")" + "\(dateToString ?? "")")
+        
     }
 }

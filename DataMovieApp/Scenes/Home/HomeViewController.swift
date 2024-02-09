@@ -16,6 +16,7 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
         searchRouter.viewController = self
         
         let searchController = UISearchController(searchResultsController: searchViewController)
+        searchController.searchResultsUpdater = self
         return searchController
     }()
     
@@ -39,7 +40,8 @@ final class HomeViewController: BaseViewController<HomeViewModel> {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        searchTimer?.invalidate()
+        searchTimer = nil
     }
 }
 
@@ -60,7 +62,7 @@ extension HomeViewController {
         definesPresentationContext = true
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.delegate = self
-        searchController.searchResultsUpdater = self
+      
         navigationItem.titleView = searchController.searchBar
         definesPresentationContext = true
         collectionView.delegate = self
@@ -104,18 +106,19 @@ extension HomeViewController: UISearchResultsUpdating {
         searchTimer = nil
         guard let searchText = searchController.searchBar.text else { return }
         
-        if searchText.count > 2 {
+        if searchText.count >= 3 {
             searchTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
                 guard let self = self else { return}
                 self.viewModel.searchMovieRequest(query: searchText)
                 let searchViewController = searchController.searchResultsController as? SearchViewController
-                searchViewController?.viewModel.cellItems = self.viewModel.searchMovieItems
-                self.viewModel.searchMovieItems.removeAll()
+                    searchViewController?.viewModel.cellItems = self.viewModel.searchMovieItems
+                    self.viewModel.searchMovieItems.removeAll()
+                
             })
         } else if searchText.isEmpty {
             let searchViewController = searchController.searchResultsController as? SearchViewController
-            searchViewController?.viewModel.cellItems.removeAll()
-            viewModel.searchMovieItems.removeAll()
+                searchViewController?.viewModel.cellItems.removeAll()
+                self.viewModel.searchMovieItems.removeAll()
         }
     }
 }

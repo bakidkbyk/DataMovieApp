@@ -23,7 +23,7 @@ public enum L10n {
     public static let similarTitle = L10n.tr("Localizable", "MovieDetailController.similarTitle")
     /// /10
     public static let topTitleRating = L10n.tr("Localizable", "MovieDetailController.topTitleRating")
-    /// Trailers
+    /// TRAILERS
     public static let trailersVideosTitle = L10n.tr("Localizable", "MovieDetailController.trailersVideosTitle")
   }
 }

@@ -74,14 +74,32 @@ extension MovieDetailViewModel {
         let request = SimilarMoviesRequest(movieId: movieId)
         self.showActivityIndicatorView?()
         dataProvider.request(for: request) { [weak self] result in
-            self?.hideActivityIndicatorView?()
+            guard let self = self else { return }
+            self.hideActivityIndicatorView?()
             switch result {
             case .success(let response):
                 let cellItems = response.results.map( {MovieDetailSimilarCellModel(similarMovie: $0) })
-                self?.cellItems.append(contentsOf: cellItems)
-                self?.isGetDataDidSuccess?()
+                self.cellItems.append(contentsOf: cellItems)
+                self.isGetDataDidSuccess?()
             case .failure(let error):
-                self?.showWarningToast?(error.localizedDescription)
+                self.showWarningToast?(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getTrailerVides() {
+        let request = MovieDetailTrailerRequest(movieId: movieId)
+        self.showActivityIndicatorView?()
+        dataProvider.request(for: request) { [weak self] result in
+            self?.hideActivityIndicatorView?()
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                let cellItems = response.results.map( {MovieDetailTrailerCellModel(trailerResponse: $0) })
+                self.movieTrailerCellItems.append(contentsOf: cellItems)
+                self.isGetDataDidSuccess?()
+            case .failure(let error):
+                self.showWarningToast?(error.localizedDescription)
             }
         }
     }
@@ -93,7 +111,7 @@ extension MovieDetailViewModel {
         backdropPath = Base.backdropPathBaseURL + (dataMovieInfo.backdropPath ?? "")
         movieRating = String(format: "%.1f", dataMovieInfo.movieRating)
         date = apiDate?.to(.custom(rawValue: "dd.mm.yyyy"))
-        title = "\(dataMovieInfo.title ?? "") \(dateToString ?? "")"
+        title = "\(dataMovieInfo.title ?? "") (\(dateToString ?? ""))"
         overview = dataMovieInfo.overview
         rateRating = dataMovieInfo.movieRating
     }
@@ -105,5 +123,9 @@ extension MovieDetailViewModel {
     func didSelectSimilarDetail(indexPath: IndexPath) {
         let movieId = cellItems[indexPath.row].movieId
         router.pushMovieDetail(movieId: movieId)
+    }
+    
+    func showHomeScreen() {
+        router.close()
     }
 }

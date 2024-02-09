@@ -5,7 +5,6 @@
 //  Created by Baki Dikbıyık on 9.12.2023.
 //
 
-
 protocol SearchViewDataSource {}
 
 protocol SearchViewEventSource {}
@@ -20,5 +19,10 @@ final class SearchViewModel: BaseViewModel<SearchRouter>, SearchViewProtocol {
         didSet {
             self.reloadData?()
         }
+    }
+    
+    func didSelectMovieDetail(indexPath: IndexPath) {
+        let movieId = cellItems[indexPath.row].movieId
+        router.pushMovieDetail(movieId: movieId)
     }
 }
